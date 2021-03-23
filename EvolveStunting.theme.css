@@ -1,0 +1,55 @@
+/**
+ * @name Evolve Stunting Discord Theme
+ * @author ElitistStone & Rutsis
+ * @version 1.0.1
+ * @description Discord theme for Evolve Stunting members
+ * @authorId 348505747828506624
+*/
+
+/*Some extra style imports*/
+@import url("https://discordstyles.github.io/FrostedGlass/base.css");
+/* BlackBox tags */
+@import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
+
+:root {
+  /* Background image variables */
+  /* Main background image | URL MUST BE A DIRECT LINK (ending in .jpg, .jpeg, .png, .gif) */
+  --background-image: url('https://i.imgur.com/SDOAMNO.jpg');
+  --background-image-blur: 1px;
+  --background-image-size: cover; 
+  --background-image-position: center;
+
+  /* Popout & Modal variables */
+  --popout-modal-image: var(--background-image);
+  --popout-modal-blur: 5px; 
+  --popout-modal-size: cover;
+  --popout-modal-position: center; 
+
+  /* Brightness variables */
+  --serverlist-brightness: 0.8; 
+  --left-brightness: 0.5; 
+  --middle-brightness: 0.1; 
+  --right-brightness: 0.1; 
+  --popout-modal-brightness: 0.8; 
+
+  /* Gradient variables */
+  --gradient-primary: 230, 149, 0; 
+  --gradient-secondary: 245, 94, 0; 
+  --gradient-direction: 250deg;
+
+  /* Tint variables Optional currently not enabled*/
+  --tint-colour: 255, 166, 0; 
+  --tint-brightness: 0; 
+
+  /* Other variables */
+  --window-padding: 10px;
+  --window-roundness:30px;
+  --scrollbar-colour: #ff6000; 
+  --link-colour: #14a7eb; 
+  --show-gift-gif-buttons: none; 
+
+  --font: 'Whitney';
+
+  /* Do not touch */
+  --update-notice-1: none;
+}
