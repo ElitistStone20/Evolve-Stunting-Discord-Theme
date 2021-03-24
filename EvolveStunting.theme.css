@@ -1,13 +1,13 @@
 /**
  * @name Evolve Stunting Theme
  * @author ElitistStone & Rutsis
- * @version 2.0.4
+ * @version 1.1.0
  * @description Discord Theme for the Evolve Stutning members
  */
 
 /* DON'T MESS WITH THESE */
 :root{
-	--version-number: "v2.0.4";
+	--version-number: "v1.1.0";
 
 	/* ACCENT COLORS */
 	--main-color: #ff6000; /* main accent color (hex, rgb or hsl)*/
