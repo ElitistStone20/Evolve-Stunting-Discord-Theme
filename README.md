@@ -1,5 +1,5 @@
 # Evolve-Stunting-Discord-Theme
-Theme for the members of Evolve Stunting
+Discord theme for the members of Evolve Stunting, written in CSS
 
 
 To use the theme follow the instructions below:
