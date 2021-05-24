@@ -1,0 +1,140 @@
+/**
+ * @name Evolve Stunting Theme
+ * @author ElitistStone & Rutsis
+ * @version 1.2.2
+ * @description Discord Theme for the Evolve Stutning members
+ */
+
+/* Credits to the developers of ClearVision for creating the structure this theme is based off. */
+
+/* IMPORT CSS */
+@import url(https://clearvision.gitlab.io/v6/main.css);
+
+/* SETTINGS */
+:root {
+	--version-number: "v1.2.2";
+
+	/* ACCENT COLORS */
+	--main-color: #ff6000; /* main accent color (hex, rgb or hsl)*/
+	--hover-color: #b14400; /* hover accent color (hex, rgb or hsl) */
+	--success-color: #43b581; /* success accent color (hex, rgb or hsl)  */
+	--danger-color: #982929; /* danger accent color (hex, rgb or hsl) */
+	--url-color: #ff6000;
+	
+	/* Customization Patch */
+	--channel-unread: var(--main-color); /* Unread Server channel color. THIS OVERRIDES YOUR MAIN COLOR*/
+	--channel-color:  rgba(255, 255, 255, 0.781); /*Read Server channel color */
+	--channel-text-selected: #fff; /* Selected channel text color, CV default is #fff */
+	--muted-color: rgba(255,255,255,0.1); /*Muted channel color */
+	--url-color: var(var(--url-color)); /*The color of url links*/     
+
+	/* STATUS COLORS */
+	--online-color: #10e987; /* online status color (hex, rgb or hsl) */
+	--idle-color: #fa9e00; /* idle status color (hex, rgb or hsl) */
+	--dnd-color: #da1313; /* dnd status color (hex, rgb or hsl) */
+	--streaming-color: #5a21bd; /* streaming status color (hex, rgb or hsl)*/
+	--offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl)*/
+
+	/* GENERAL */
+	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed)*/
+	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) */
+	--text-normal: rgb(253, 253, 253); /* color of default discord text */
+	--text-muted:  rgb(114, 118, 125); /* color of default discord muted text*/
+	--channels-width: 250px; /* channel list width (240px for Discord default) */
+	--members-width: 250px; /* member list width */
+	--avatar-roundness: 50%; /* avatar roundness */
+
+	/* APP BACKGROUND */
+	--background-shading: 0%; /* app background shading (0 for complete smoothness) */
+	--background-overlay: rgba(0, 0, 0, 0.06); /* app background overlay color/gradient */
+	--background-image: url(https://i.imgur.com/SDOAMNO.jpg); /* app background image*/
+	--background-position: center; /* app background position */
+	--background-size: cover; /* app background size  */
+	--background-repeat: no-repeat; /* app background repeat*/
+	--background-attachment: fixed; /* app background attachment */
+	--background-brightness: 130%; /* app background brightness */
+	--background-contrast: 100%; /* app background contrast */
+	--background-saturation: 125%; /* app background saturation */
+	--background-invert: 0%; /* app background invert */
+	--background-grayscale: 0%; /* app background grayscale */
+	--background-sepia: 0%; /* app background sepia */
+	--background-blur: 1.6px; /* app background blur/*
+
+	/* MODAL BACKDROP */
+	--backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient */
+	--backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS)*/
+	--backdrop-position: var(--background-position); /* modal backdrop position */
+	--backdrop-size: var(--background-size); /* modal backdrop size  */
+	--backdrop-repeat: var(--background-repeat); /* modal backdrop repeat */
+	--backdrop-attachment: var(--background-attachment); /* modal backdrop attachment */
+	--backdrop-brightness: var(--background-brightness); /* modal backdrop brightness*/
+	--backdrop-contrast: var(--background-contrast); /* modal backdrop contrast */
+	--backdrop-saturation: var(--background-saturation); /* modal backdrop saturation  */
+	--backdrop-invert: var(--background-invert); /* modal backdrop invert*/
+	--backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale */
+	--backdrop-sepia: var(--background-sepia); /* modal backdrop sepia */
+	--backdrop-blur: var(--background-blur); /* modal backdrop blur  */
+
+	/* USER POPOUT BACKGROUND */
+	--user-popout-image: var(--background-image); /* app background image*/
+	--user-popout-position: var(--background-position); /* user popout background position */
+	--user-popout-size: var(--background-size); /* user popout background size */
+	--user-popout-repeat: var(--background-repeat); /* user popout background repeat */
+	--user-popout-attachment: var(--background-attachment); /* user popout background attachment  */
+	--user-popout-brightness: var(--background-brightness); /* user popout background brightness */
+	--user-popout-contrast: var(--background-contrast); /* user popout background contrast */
+	--user-popout-saturation: var(--background-saturation); /* user popout background saturation */
+	--user-popout-invert: var(--background-invert); /* user popout background invert */
+	--user-popout-grayscale: var(--background-grayscale); /* user popout background grayscale  */
+	--user-popout-sepia: var(--background-sepia); /* user popout background sepia */
+	--user-popout-blur: calc(var(--background-blur) + 3.5px); /* user popout background blur */
+
+	/* USER MODAL BACKGROUND */
+	--user-modal-image: var(--background-image); /* app background image  */
+	--user-modal-position: var(--background-position); /* user modal background position  */
+	--user-modal-size: var(--background-size); /* user modal background size */
+	--user-modal-repeat: var(--background-repeat); /* user modal background repeat  */
+	--user-modal-attachment: var(--background-attachment); /* user modal background attachment  */
+	--user-modal-brightness: var(--background-brightness); /* user modal background brightness */
+	--user-modal-contrast: var(--background-contrast); /* user modal background contrast */
+	--user-modal-saturation: var(--background-saturation); /* user modal background saturation */
+	--user-modal-invert: var(--background-invert); /* user modal background invert*/
+	--user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale*/
+	--user-modal-sepia: var(--background-sepia); /* user modal background sepia  */
+	--user-modal-blur: calc(var(--background-blur) + 6px); /* user modal background blur  */
+	
+	/*Home icon styling*/
+	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg);	/*Icon link to clearvision icons library*/
+	--home-position: center;
+	--home-size: 40px
+}
+/*Main theme*/
+/*TITLE BAR*/
+.typeWindows-1za-n7 > .wordmark-2iDDfm:before {
+	content: "";
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14px;
+	text-shadow: 0 0 3px #000;
+}
+.typeWindows-1za-n7 > .wordmark-2iDDfm:after {
+	content: "Evolve";
+	color: rgba(255, 255, 255, 0.3);
+	font-family: var(--code-font);
+	font-size: 12px;
+}
+
+/*EVOLVE STUNTING ANIMATION IN USER CONTAINER*/
+.container-3baos1:before {
+	content: "Evolve Stunting";
+	right: 50%;
+	text-align: right;
+	transform: translateX(50%);
+	color: var(--main-color);
+}
+.container-3baos1:after {
+	content: var(--version-number);
+	left: 50%;
+	text-align: left;
+	opacity: 0;
+	transform: translateX(50%) rotateX(90deg);
+  }
